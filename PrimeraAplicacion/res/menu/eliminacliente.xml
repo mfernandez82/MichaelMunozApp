@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+       <item 
+        android:id="@+id/menu_modificar_client"
+        android:icon="@drawable/ic_cerra"
+    	android:title="Modificar">
+    </item>
+    
+	<item 
+	    android:id="@+id/menu_delete_client"
+	    android:icon="@drawable/ic_cerra"
+    	android:title="Eliminar">
+	</item>
+</menu>

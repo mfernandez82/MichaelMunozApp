@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cl.inacap.unidad1.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="22" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".LoginActivity"
+            android:label="Ingresar"
+            android:theme="@style/CustomActionBarTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UsuariosActivity"
+            android:label="@string/title_activity_usuarios" >
+        </activity>
+        <activity
+            android:name=".ClientesActivity"
+            android:label="@string/title_activity_clientes"
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+        <activity
+            android:name=".MenuActivity"
+            android:label="Menu Principal"
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+        <activity
+            android:name=".AgregarActivity"
+            android:label="@string/title_activity_mantenedor_clientes"
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+        <activity
+            android:name=".ManClientesActivity"
+            android:label="Mantenedor de Clientes"
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+        <activity
+            android:name=".EliminarActivity"
+            android:label="@string/title_activity_eliminar" >
+        </activity>
+        <activity
+            android:name=".ClienteActivity"
+            android:label="@string/title_activity_cliente" >
+        </activity>
+        <activity
+            android:name=".Clientes"
+            android:label="Mantenedor Clientes"
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+        <activity
+            android:name=".Crear"
+            android:label="Nuevo Cliente"
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+        <activity
+            android:name=".Modificar"
+            android:label="@string/title_activity_modificar" >
+        </activity>
+        <activity
+            android:name=".Eliminar"
+            android:label="@string/title_activity_eliminar" >
+        </activity>
+        <activity
+            android:name=".RealizarPedidoACT"
+            android:label="Realizar Pedido"
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+        <activity
+            android:name=".Pedido"
+            android:label="@string/title_activity_pedido" >
+        </activity>
+        <activity
+            android:name=".Rpedido"
+            android:label="Realizar Pedido"
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+        <activity
+            android:name=".DosRpedido"
+            android:label="@string/title_activity_dos_rpedido" 
+            android:theme="@style/CustomActionBarTheme">
+        </activity>
+    </application>
+
+</manifest>

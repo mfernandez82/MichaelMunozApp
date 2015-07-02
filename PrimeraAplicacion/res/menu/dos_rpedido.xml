@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="cl.inacap.unidad1.activity.DosRpedido" >
+
+       <item
+ android:id="@+id/menu_0rp2"
+ android:icon="@drawable/ic_tres"
+ android:showAsAction="always"
+ android:background="@drawable/blanco"
+ android:title="Menu 0">
+   <menu>
+     <item
+          android:id="@+id/menu_1rp2"
+          android:icon="@drawable/ic_cerra"
+          android:showAsAction="never"  
+          android:title="Cerrar" />
+     <item
+          android:id="@+id/menu_2rp2"
+          android:icon="@drawable/ic_hom"
+          android:showAsAction="never"  
+          android:title="Menu Principal" />
+  
+   </menu>
+ </item>
+
+</menu>

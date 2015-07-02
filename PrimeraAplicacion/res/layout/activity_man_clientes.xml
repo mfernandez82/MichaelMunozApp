@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnEliminar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="cl.inacap.unidad1.activity.ManClientesActivity" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tfon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="#8a6603"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:text="  Elige una opción "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#052796" />
+
+            <TextView
+                android:id="@+id/tv_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                  android:layout_marginTop="20dp"
+                android:shadowColor="#8a6603"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#0731b8" />
+        </LinearLayout>
+
+       
+
+        <Button
+            android:id="@+id/btnCrear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/b_cre"
+            android:onClick="pasarAcrear" />
+
+        <Button
+            android:id="@+id/btnModificar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/b_mod"
+            android:onClick="pasarAmodificar" />
+
+        <Button
+            android:id="@+id/btnElimina2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/b_elim" 
+            android:onClick="pasarAeliminar"/>
+
+        <Button
+            android:id="@+id/btnVerClientes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/b_ver"
+            android:onClick="pasarAverclientes"/>
+    </LinearLayout>
+
+</RelativeLayout>
