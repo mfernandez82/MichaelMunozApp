@@ -1,5 +1,5 @@
 - Actividad 3 – Tarea sumativa: Construcción de una interfaz de usuario en Android
-
+Probando GIT
 - Nombre asignatura: P10I11 - Programación de aplicaciones móviles en Android 
 - Nombre Profesor: Cristian Correa Urrutia
 - Nombre Alumno: Michael Muñoz Fuenzalida
