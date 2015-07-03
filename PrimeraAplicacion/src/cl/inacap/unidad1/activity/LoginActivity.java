@@ -15,6 +15,9 @@ import android.widget.Toast;
 
 public class LoginActivity extends Activity {
 	Vendedor loginDataBaseAdapter;
+	private EditText txt_login_db;
+	private EditText txt_contrasena_db;
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,25 +27,31 @@ public class LoginActivity extends Activity {
 	loginDataBaseAdapter.InsertVendedor("i", "i");
 	loginDataBaseAdapter.InsertVendedor("Michael", "pass");
 	Log.d("DataBase CRUD"," insert vendedores");
+	
+	txt_login_db =(EditText)findViewById(R.id.txt_login);
+	txt_contrasena_db =(EditText)findViewById(R.id.txt_contrasena);
+	
     }
     
 	public void pasarAmenuPrincipal(View v) 
 		{
-			validarLoginUsuarioDB();
-		}
-		
-	public void validarLoginUsuarioDB()
-	{
-		EditText txt_login_db =(EditText)findViewById(R.id.txt_login);
-		EditText txt_contrasena_db =(EditText)findViewById(R.id.txt_contrasena);
-		
 		String userName = txt_login_db.getText().toString();
 		String password = txt_contrasena_db.getText().toString();
 		
-		String storedPassword = loginDataBaseAdapter.GetCursorVendedor(userName);
+			validarLoginUsuarioDB(userName,password);
+		}
+		
+	public void validarLoginUsuarioDB(String user,String pass)
+	{
+		
+		
+		//String userName = txt_login_db.getText().toString();
+		//String password = txt_contrasena_db.getText().toString();
+		
+		String storedPassword = loginDataBaseAdapter.GetCursorVendedor(user);
 		Log.d("DataBase CRUD"," obtener pass usuario");
 	
-		if (password.equals(storedPassword)) 
+		if (pass.equals(storedPassword)) 
 		{
 			Toast.makeText(this, "Usuario Valido", Toast.LENGTH_SHORT).show();
 			Intent intent = new Intent(this,MenuActivity.class);
