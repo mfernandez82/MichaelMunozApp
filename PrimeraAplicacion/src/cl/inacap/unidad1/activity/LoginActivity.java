@@ -41,7 +41,7 @@ public class LoginActivity extends Activity {
 			validarLoginUsuarioDB(userName,password);
 		}
 		
-	public void validarLoginUsuarioDB(String user,String pass)
+	public boolean validarLoginUsuarioDB(String user,String pass)
 	{
 		
 		
@@ -61,12 +61,15 @@ public class LoginActivity extends Activity {
 		
 			txt_login_db.setText("");
 			txt_contrasena_db.setText("");	
+		return true;
+			
 		} 
 		else 
 		{
 			Toast.makeText(LoginActivity.this, "Usuario o Contraseña incorrectos", Toast.LENGTH_SHORT).show();
+		return false;
 		}
-		
+	
 	}
 	
 	

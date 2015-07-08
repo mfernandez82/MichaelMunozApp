@@ -1,5 +1,6 @@
 package cl.inacap.unidad1.activity;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class ManClientesActivity extends Activity {
@@ -15,8 +17,6 @@ public class ManClientesActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_man_clientes);
-		
-		
 
 		Bundle extras = getIntent().getExtras();
         String user2 = extras.getString("userMENU");
@@ -59,13 +59,20 @@ public class ManClientesActivity extends Activity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
+		super.onOptionsItemSelected(item);
+		 
+        switch(item.getItemId()){
+            case R.id.menu_crea:
+                Toast.makeText(getBaseContext(), "You selected 1", Toast.LENGTH_SHORT).show();
+                break;
+ 
+            case R.id.menu_crea2:
+                Toast.makeText(getBaseContext(), "You selected 2", Toast.LENGTH_SHORT).show();
+                break;
+ 
+          
+        }
 			return true;
-		}
-		return super.onOptionsItemSelected(item);
+	
 	}
 }

@@ -66,7 +66,7 @@ public final class R {
     public static final class id {
         public static final int TextView01=0x7f08001f;
         public static final int TextView02=0x7f080022;
-        public static final int action_settings=0x7f080038;
+        public static final int action_settings=0x7f08003a;
         public static final int b_guardar=0x7f08002c;
         public static final int b_limpiar=0x7f08002d;
         public static final int btnCrear=0x7f080011;
@@ -81,6 +81,8 @@ public final class R {
         public static final int btn_vender=0x7f080016;
         public static final int button1=0x7f080009;
         public static final int button2=0x7f080008;
+        public static final int cliente1=0x7f080032;
+        public static final int cliente2=0x7f080033;
         public static final int datePicker1=0x7f080007;
         public static final int grid_viewSLIDER=0x7f08001b;
         public static final int lb_mUsuario=0x7f080015;
@@ -92,17 +94,18 @@ public final class R {
         public static final int lv_usuarios=0x7f08001d;
         public static final int mantenedor_clientes=0x7f080019;
         public static final int menu_0=0x7f080031;
-        public static final int menu_0p=0x7f08003a;
-        public static final int menu_0rp2=0x7f080034;
-        public static final int menu_1=0x7f080032;
-        public static final int menu_1p=0x7f08003b;
-        public static final int menu_1rp2=0x7f080035;
-        public static final int menu_2=0x7f080033;
-        public static final int menu_2p=0x7f08003c;
-        public static final int menu_2rp2=0x7f080036;
+        public static final int menu_0p=0x7f08003d;
+        public static final int menu_0rp2=0x7f080036;
+        public static final int menu_1=0x7f08003b;
+        public static final int menu_1p=0x7f08003e;
+        public static final int menu_1rp2=0x7f080037;
+        public static final int menu_2p=0x7f08003f;
+        public static final int menu_2rp2=0x7f080038;
+        public static final int menu_crea=0x7f080034;
+        public static final int menu_crea2=0x7f080035;
         public static final int menu_delete_client=0x7f080030;
-        public static final int menu_modificar_client=0x7f080037;
-        public static final int menu_update_client=0x7f080039;
+        public static final int menu_modificar_client=0x7f080039;
+        public static final int menu_update_client=0x7f08003c;
         public static final int numberPicker1=0x7f08000a;
         public static final int relativeLayout1=0x7f08001c;
         public static final int spinner=0x7f08001a;

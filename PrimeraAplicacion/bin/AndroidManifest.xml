@@ -43,6 +43,7 @@
         <activity
             android:name=".ClientesActivity"
             android:label="@string/title_activity_clientes"
+            
             android:theme="@style/CustomActionBarTheme" >
         </activity>
         <activity
@@ -58,6 +59,7 @@
         <activity
             android:name=".ManClientesActivity"
             android:label="Mantenedor de Clientes"
+          
             android:theme="@style/CustomActionBarTheme" >
         </activity>
         <activity
