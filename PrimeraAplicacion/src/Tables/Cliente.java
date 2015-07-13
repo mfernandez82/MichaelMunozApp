@@ -4,6 +4,7 @@ import DB.DataBaseSQLite;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
 public class Cliente {
@@ -34,7 +35,7 @@ public static final String NOM_TABLE = "CLIENTE";
 			sdb = helper.getWritableDatabase();
 		}
 	
-	public ContentValues GenerarCV(String nom, String dir, String fon, int ven, int est)
+/*	public ContentValues GenerarCV(String nom, String dir, String fon, int ven, int est)
 		{
 			ContentValues values =  new ContentValues();
 			values.put(CLIENTE_NOMBRE, nom);
@@ -44,17 +45,35 @@ public static final String NOM_TABLE = "CLIENTE";
 			values.put(CLIENTE_ESTADO, est);
 		
 			return values;		
-		}
+		}*/
 		
-	public void InsertCliente (String nom, String dir, String fon, int ven, int est)
+	public void InsertCliente (String nom, String dir, String fon)
 		{	
-			sdb.insert(NOM_TABLE, null, GenerarCV(nom, dir,fon,ven, est));		
+			sdb.insert(NOM_TABLE, null, GenerarCV(nom, dir,fon));		
 		}
 	
-	public void UpdateCliente(String nom, String dir, String fon, int ven, int est)
+	
+	public ContentValues GenerarCV(String nombres, String Direccion, String fono)
+	{
+		ContentValues valores =  new ContentValues();
+		valores.put(CLIENTE_NOMBRE, nombres);
+		valores.put(CLIENTE_DIRECCION, Direccion);
+		valores.put(CLIENTE_FONO, fono);
+		
+		return valores;
+		
+	}
+	
+	
+	public void UpdateCliente(String nombres, String direccion, String fono, String id_cliente)
 		{		
-			sdb.update(NOM_TABLE, GenerarCV(nom, dir, fon,ven, est), CLIENTE_NOMBRE +"=?", new String []{nom});	
+			sdb.update(NOM_TABLE, GenerarCV(nombres, direccion, fono), CLIENTE_ID +"=?", new String []{id_cliente});	
+		
 		}
+	
+	
+
+	
 	
 	public void DeleteCliente(String nom)
 		{
@@ -76,6 +95,22 @@ public static final String NOM_TABLE = "CLIENTE";
 		{		
 			String[] columnas = new String[] {CLIENTE_ID +" AS _id ",CLIENTE_NOMBRE,CLIENTE_DIRECCION,CLIENTE_FONO};				
 			return	sdb.query(NOM_TABLE, columnas, " ID=?"+new String[]{_id}, null, null, null, null);			
-		}	
+		}
+	
+	public Cursor getRegistro(long id) throws SQLException
+	   {
+		
+		String[] columnas = new String[] {CLIENTE_ID +" AS _id ",CLIENTE_NOMBRE,CLIENTE_DIRECCION,CLIENTE_FONO};				
+		
+	      Cursor c = sdb.query( true, NOM_TABLE, columnas, CLIENTE_ID + "=" + id, null, null, null, null, null);
+	 
+	      //Nos movemos al primer registro de la consulta
+	      if (c != null) {
+	         c.moveToFirst();
+	      }
+	      return c;
+	   }
+	
+
 	
 }

@@ -13,12 +13,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ContextMenu.ContextMenuInfo;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
+
+
 public class Clientes extends Activity {
+	String codigo ;
 	private Cliente manager;
 	private Cursor cursor;
 	private ListView lista;
@@ -27,6 +33,9 @@ public class Clientes extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_clientes);
+		
+
+		
 		
 		manager = new Cliente(this);
 	    /*
@@ -61,6 +70,7 @@ public class Clientes extends Activity {
 		android.view.MenuInflater inflater = getMenuInflater();
 		AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) menuInfo;
 		inflater.inflate(R.menu.eliminacliente, menu);
+	
 	}
 	
 	@Override
@@ -87,19 +97,11 @@ public class Clientes extends Activity {
 	
 	public void modificarCliente_X(int p_id){
 		
-			// Recupera un cliente especifico.
-			Toast.makeText(
-					getApplicationContext(),
-					"Modificar cliente  "+ p_id,
-					Toast.LENGTH_SHORT).show();
-			
-			    Intent intent = new Intent( Clientes.this, Crear.class);	                
-	    		       
-		        String codigo = String.valueOf(p_id);
-		        // parametros para enviar a la otra actividad .		        		      
-		        intent.putExtra("IDcliente", codigo);		   
-		        startActivity(intent);  
-			
+	Toast.makeText(getApplicationContext(),"Modificar cliente  "+ p_id,Toast.LENGTH_SHORT).show();	
+	Intent intent = new Intent( Clientes.this, Crear.class);	    
+				        String codigo = String.valueOf(p_id);
+				        intent.putExtra("IDcliente", codigo);		   
+					    startActivity(intent); 
 		}
 	
 	
@@ -148,10 +150,14 @@ public class Clientes extends Activity {
 	
 	public void pasarAcrea(View v) 
 	{
+		
 		Intent intent = new Intent(this,Crear.class);
+		codigo = "crea";
+        intent.putExtra("IDcliente", codigo);	
 		this.startActivity(intent);
+        	
 	}
-	
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		 int id = item.getItemId();
